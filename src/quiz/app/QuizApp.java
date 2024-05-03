@@ -5,14 +5,23 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
-import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
 
 public class QuizApp {
    
     public static void main(String[] args) {
+
+
         
         
+      login log = new login();
+//      
+//      
+//        
+
+        log.setBounds(660, 340, 700, 500);
+//        log.setBackground(new Color(0,0,0,80));
+            log.setBackground(new Color(255 ,255,255));
         
         //panal
         
@@ -60,8 +69,7 @@ public class QuizApp {
             }
         });
        
-        
-        
+
         
         
         
@@ -83,10 +91,30 @@ public class QuizApp {
         
         
         
-        //add the component
-        
+
         frame.add(loginAndRegister);
         
+        log.setVisible(false);
+        frame.add(log);
+        
+        
+        //action 
+                
+        login.addActionListener(new ActionListener() {
+          @Override
+          public void actionPerformed(ActionEvent e) {
+                log.setVisible(true);
+
+          }
+          
+            
+        });
+         
+         
+        
+         
         frame.add(label );
+        
+       
     }
 }
